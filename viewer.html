@@ -19,7 +19,7 @@
     const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
     if (code) {
-      const rawUrl = `https://raw.githubusercontent.com/GP-Site-UK/quack-international/main/notes/${code}.md`;
+      const rawUrl = `https://raw.githubusercontent.com/GP-Site-UK/quack-international/main/notes/${code}.html`;
       document.getElementById("note").src = rawUrl;
     }
   </script>
