@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dr Quack Note Access</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+</head>
+<body>
+  <sl-card style="max-width: 400px; margin: 3rem auto;">
+    <h2 slot="header">Access Translated Note</h2>
+    <sl-input id="codeInput" label="Enter Access Code" maxlength="20" clearable required></sl-input>
+    <br><br>
+    <sl-button id="openNote" variant="primary">Open Note</sl-button>
+  </sl-card>
+
+  <script>
+    document.getElementById('openNote').addEventListener('click', () => {
+      const code = document.getElementById('codeInput').value.trim();
+      if (code) {
+        window.location.href = `viewer.html?code=${encodeURIComponent(code)}`;
+      }
+    });
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
