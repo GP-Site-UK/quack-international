@@ -1,7 +1,7 @@
 {
   "name": "Dr Quack Translated Note",
   "short_name": "DrQuack",
-  "start_url": "/viewer.html",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0b0c0c",
