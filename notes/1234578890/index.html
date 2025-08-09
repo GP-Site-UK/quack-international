@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Discharge Note Base App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#005eb8" />
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+  <script>if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js');</script>
+</head>
+<body>
+  <h1>Discharge Note Base App</h1>
+  <sl-card>
+    <h2 slot="header">Available Notes</h2>
+    <ul>
+      <li><a href="discharge-note.html">Discharge Note</a></li>
+    </ul>
+  </sl-card>
+</body>
+</html>
